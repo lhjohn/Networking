@@ -1,0 +1,27 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "shell",
+      "label": "clang++ build active file",
+      "command": "/usr/bin/clang++",
+      "args": [
+        "-std=c++17",
+        "-stdlib=libc++",
+        "-I/Users/henrikjohn/Projects/Networking/NetCommon/Header Files/",
+        "-I/Users/henrikjohn/Projects/SDKs/asio-1.18.1/include/",
+        "-g",
+        "${file}",
+        "-o",
+        "/Users/henrikjohn/Projects/Networking/Build/Server"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": "build"
+    },
+  ]
+}
